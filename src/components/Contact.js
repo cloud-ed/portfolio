@@ -11,7 +11,7 @@ export default function Contact() {
             className="mx-auto inline-block mb-4"
             fontSize="large"
           />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-black">
             Contact Me
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
