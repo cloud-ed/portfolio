@@ -1,8 +1,7 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -17,47 +16,56 @@ export default function ButtonAppBar(props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar position="fixed" sx={{ bgcolor: "rgb(35, 47, 78)" }}>
-          <Container maxWidth="xl">
-            <Toolbar disableGutters>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Josh Milburn
-              </Typography>
-              <Button color="inherit" onClick={topFunction}>About</Button>
-              <Button color="inherit" href='#projects'>Projects</Button>
-              <Button color="inherit" href='#skills'>Skills</Button>
+        <AppBar position="fixed" sx={{ bgcolor: "rgb(20, 20, 20)" }}>
+          <Container maxWidth="lg">
+            <Toolbar disableGutters sx={{ flexWrap: "wrap", justifyContent: "space-between" }}>
               <IconButton
-                size="large"
                 edge="start"
-                color="inherit"
-                aria-label="github"
-                href='https://github.com/cloud-ed'
+                href="#"
+                sx={{ p: 0 }}
               >
-                <GitHubIcon />
+                <Box
+                  component="img"
+                  src="/logo192.png"
+                  alt="Logo"
+                  sx={{ height: 40 }}
+                />
               </IconButton>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="linkedin"
-                href='https://www.linkedin.com/in/joshmilburn/'
-              >
-                <LinkedInIcon />
-              </IconButton>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
+                <Button color="inherit" href='#about' sx={{ "&:hover": { color: "primary.light"} }}>About</Button>
+                <Button color="inherit" href='#projects' sx={{ "&:hover": { color: "primary.light"} }}>Projects</Button>
+                <Button color="inherit" href='#skills' sx={{ "&:hover": { color: "primary.light"} }}>Skills</Button>
+                <IconButton
+                  href="https://github.com/cloud-ed"
+                  target='_blank'
+                  sx={{ p: 0 }}
+                >
+                  <Box
+                    component="img"
+                    src="/logo192.png"
+                    alt="GitHub Profile"
+                    sx={{ height: 40 }}
+                  />
+                </IconButton>
+                <IconButton
+                  href='https://www.linkedin.com/in/joshmilburn/'
+                  target='_blank'
+                  sx={{ p: 0 }}
+                >
+                  <Box
+                    component="img"
+                    src="/logo192.png"
+                    alt="LinkedIn Profile"
+                    sx={{ height: 40 }}
+                  />
+                </IconButton>
+              </Box>
             </Toolbar>
           </Container>
         </AppBar>
       </HideOnScroll>
-      <Box sx={{ flexGrow: 1 }}>
-      </Box>
     </React.Fragment>
   );
-}
-
-// Function to scroll to the top of the page
-function topFunction() {
-  document.body.scrollTop = 0; // Safari
-  document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, etc.
 }
 
 // Function to hide the navbar on scroll
