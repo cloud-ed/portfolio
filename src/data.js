@@ -11,7 +11,7 @@ export const projects = [
     title: "Portfolio Website",
     subtitle: "JavaScript",
     description:
-      "The website you're on right now! Built with React, TailwindCSS and MaterialUI. Deployed with Vercel",
+      "The website you're on right now! Built with React and TailwindCSS. Deployed with Vercel",
     image: "./logo192.png",
     link: "https://github.com/cloud-ed/PortfolioWebsite",
   },
