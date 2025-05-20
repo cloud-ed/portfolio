@@ -11,9 +11,9 @@ export default function About() {
             languages and technologies.
           </h1>
           <p className="mb-8 leading-relaxed">
-            I'm a young developer building a career in web development and
-            software engineering. I'm always looking for ways to improve my work
-            so feel free to give me some feedback or tips!
+            I'm a Brisbane-based developer building a career in web development
+            and software engineering. I'm always looking for ways to improve my
+            work so feel free to give me some feedback or tips!
           </p>
           <div className="flex justify-center space-x-4">
             <Button variant="contained" size="large" href="#projects">
