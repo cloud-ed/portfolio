@@ -35,7 +35,7 @@ export default function Navbar() {
           <img src="/logo192.png" alt="Logo" className="h-12" />
         </button>
         <div className="hidden md:flex space-x-6 text-sm font-medium h-full">
-          {['about', 'projects', 'skills'].map((section) => (
+          {['about', 'projects', 'skills', 'contact'].map((section) => (
             <a
               key={section}
               href={`#${section}`}
@@ -45,7 +45,7 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-6">
           <a
             href="https://github.com"
             target="_blank"
