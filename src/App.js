@@ -6,12 +6,17 @@ import Contact from "./components/Contact";
 
 export default function App() {
   return (
-    <main className="text-black bg-white body-font px-4 md:px-8 lg:px-12 max-w-custom mx-auto">
-      <Navbar />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-    </main>
+    <div className="bg-gray-50">
+      <main className="text-black body-font mx-auto">
+        <Navbar />
+        <About />
+        <hr className="border-gray-200" />
+        <Projects />
+        <hr className="border-gray-200" />
+        <Skills />
+        <hr className="border-gray-200" />
+        <Contact />
+      </main>
+    </div>
   );
 }
