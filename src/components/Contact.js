@@ -1,36 +1,71 @@
-import ContactsIcon from "@mui/icons-material/Contacts";
-import IconButton from "@mui/material/IconButton";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
   return (
-    <div id="contact">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-        <div className="flex flex-col w-full mb-20">
-          <ContactsIcon
-            className="mx-auto inline-block mb-4"
-            fontSize="large"
-          />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-black">
-            Contact Me
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Feel free to reach out to me on any of the following socials. I'm
-            always looking for new opportunities to learn and excited to further
-            my career.
+    <section id="contact" className="py-16 px-4">
+      <div className="px-4 md:px-8 lg:px-12 max-w-custom mx-auto flex flex-col md:flex-row items-start md:items-center gap-12">
+        {/* Left Side */}
+        <div className="md:w-1/2 space-y-6">
+          <h1 className="text-4xl font-bold text-black">Contact Me</h1>
+          <p className="text-gray-600">
+            Feel free to reach out to me on any of these socials. I'm always
+            looking for new opportunities to learn and I'm excited to further my
+            career.
           </p>
+
+          <div className="flex gap-4 text-3xl mt-4">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-700 text-black"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-700 text-black"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+          </div>
         </div>
-        <div className="title-font font-large">
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="github"
-          >
-            <GitHubIcon size="inherit" />
-          </IconButton>
+
+        {/* Right Side */}
+        <div className="md:w-1/2 w-full bg-gray-100 p-8 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-black">
+            Send me an email
+          </h2>
+          <form className="space-y-4">
+            <div className="flex flex-col md:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full p-3 rounded border border-gray-300 bg-white text-black"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full p-3 rounded border border-gray-300 bg-white text-black"
+              />
+            </div>
+            <textarea
+              rows="5"
+              placeholder="Message"
+              className="w-full p-3 rounded border border-gray-300 bg-white text-black"
+            ></textarea>
+            <button
+              type="submit"
+              className="px-6 py-3 bg-black text-white rounded hover:bg-gray-800"
+            >
+              Send
+            </button>
+          </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
