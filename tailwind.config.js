@@ -5,7 +5,6 @@ module.exports = {
     extend: {
       maxWidth: {
         custom: "1200px",
-        custom_nav: "1100px",
       },
     },
   },
