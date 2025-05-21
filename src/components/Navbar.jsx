@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +25,7 @@ export default function Navbar() {
         hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
-      <nav className="flex items-center justify-between px-4 md:px-8 lg:px-12 h-20 text-white max-w-custom_nav mx-auto">
+      <nav className="flex items-center justify-between h-20 text-white px-4 md:px-8 lg:px-12 max-w-custom mx-auto">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex items-center h-full"
@@ -61,12 +60,6 @@ export default function Navbar() {
             className="h-full flex items-center text-white"
           >
             <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
-          </a>
-          <a
-            href="mailto:example@email.com"
-            className="h-full flex items-center"
-          >
-            <FontAwesomeIcon icon={faEnvelope} size='2x' color='white' />
           </a>
           <button className="md:hidden h-full flex items-center" onClick={() => setIsOpen(!isOpen)}>
             <svg
