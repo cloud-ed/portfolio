@@ -3,11 +3,8 @@ import CodeIcon from "@mui/icons-material/Code";
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="px-4 md:px-8 lg:px-12 py-16 bg-white text-black"
-    >
-      <div className="max-w-7xl mx-auto text-center">
+    <section id="projects" className="px-4 md:px-8 lg:px-12 py-16 text-black">
+      <div className="px-4 md:px-8 lg:px-12 max-w-custom mx-auto text-center">
         <div className="flex flex-col w-full mb-12">
           <CodeIcon className="mx-auto mb-4 text-green-600" fontSize="large" />
           <h1 className="sm:text-4xl text-3xl font-semibold mb-4">

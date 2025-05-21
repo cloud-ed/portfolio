@@ -4,8 +4,8 @@ import { skills } from "../data";
 
 export default function Skills() {
   return (
-    <div id="skills">
-      <div className="container px-5 py-10 mx-auto">
+    <div id="skills" className="bg-white">
+      <div className="container px-5 py-10 mx-auto px-4 md:px-8 lg:px-12 max-w-custom">
         <div className="text-center mb-20">
           <MemoryIcon className="w-10 inline-block mb-4" fontSize="large" />
           <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4">
