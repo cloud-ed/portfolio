@@ -43,7 +43,7 @@ export default function Contact() {
 
           <div className="flex gap-4 text-3xl mt-4">
             <a
-              href="https://github.com"
+              href="https://github.com/cloud-ed"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-700 text-black"
@@ -51,7 +51,7 @@ export default function Contact() {
               <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/joshmilburn/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-700 text-black"
@@ -63,6 +63,9 @@ export default function Contact() {
 
         {/* Right Side */}
         <div className="md:w-1/2 w-full bg-gray-100 p-8 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-4 text-black text-center">
+            🚧 Currently Unavailable 🚧
+          </h2>
           <h2 className="text-2xl font-semibold mb-4 text-black">
             Send me an email
           </h2>
@@ -74,6 +77,7 @@ export default function Contact() {
                 placeholder="Name"
                 required
                 className="w-full p-3 rounded border border-gray-300 bg-white text-black"
+                disabled
               />
               <input
                 type="email"
@@ -81,6 +85,7 @@ export default function Contact() {
                 placeholder="Email"
                 required
                 className="w-full p-3 rounded border border-gray-300 bg-white text-black"
+                disabled
               />
             </div>
             <textarea
@@ -89,11 +94,13 @@ export default function Contact() {
               placeholder="Message"
               required
               className="w-full p-3 rounded border border-gray-300 bg-white text-black"
+              disabled
             ></textarea>
 
             <button
               type="submit"
               className="px-6 py-3 bg-black text-white rounded hover:bg-gray-800"
+              disabled
             >
               Send
             </button>
