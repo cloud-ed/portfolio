@@ -1,38 +1,32 @@
-import { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!recaptchaToken) {
-      alert("Please complete the reCAPTCHA.");
-      return;
-    }
 
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    data.recaptchaToken = recaptchaToken;
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((response) => {
-        if (response.success) {
-          alert("Message sent successfully!");
-        } else {
-          alert("Failed to send message.");
-        }
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
+
+      const json = await res.json();
+
+      if (json.success) {
+        alert("Message sent successfully!");
+        e.target.reset();
+      } else {
+        alert("Failed to send message: " + (json.error || "Unknown error"));
+      }
+    } catch (error) {
+      alert("Network error: " + error.message);
+    }
   };
 
   return (
@@ -96,11 +90,6 @@ export default function Contact() {
               required
               className="w-full p-3 rounded border border-gray-300 bg-white text-black"
             ></textarea>
-
-            <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-              onChange={setRecaptchaToken}
-            />
 
             <button
               type="submit"
