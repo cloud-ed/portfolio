@@ -46,7 +46,7 @@ export default function Navbar() {
         </div>
         <div className="flex items-center space-x-6">
           <a
-            href="https://github.com"
+            href="https://github.com/cloud-ed"
             target="_blank"
             rel="noopener noreferrer"
             className="h-full flex items-center text-white"
@@ -54,7 +54,7 @@ export default function Navbar() {
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/joshmilburn/"
             target="_blank"
             rel="noopener noreferrer"
             className="h-full flex items-center text-white"
