@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ export default function Navbar() {
           className="flex items-center h-full"
           aria-label="Scroll to top"
         >
-          <img src="/logo192.png" alt="Logo" className="h-12" />
+          <FontAwesomeIcon icon={faHouse} size='2x'/>
         </button>
         <div className="hidden md:flex space-x-6 text-sm font-medium h-full">
           {['about', 'projects', 'skills', 'contact'].map((section) => (
