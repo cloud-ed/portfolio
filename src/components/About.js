@@ -21,11 +21,11 @@ export default function About() {
             </Button>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 pt-10">
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="./logo512.png"
+            src="./photo.webp"
           />
         </div>
       </div>
