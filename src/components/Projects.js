@@ -8,7 +8,7 @@ export default function Projects() {
         <div className="flex flex-col w-full mb-12">
           <CodeIcon className="mx-auto mb-4 text-green-600" fontSize="large" />
           <h1 className="sm:text-4xl text-3xl font-semibold mb-4">
-            Apps I've Built
+            Projects I've Built
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">
             A collection of the projects I've worked on during my free time.
